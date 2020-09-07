@@ -107,7 +107,7 @@ end
 draw?(board)
 
 def over?(board)
-  full?(board) || won?(board)
+  full?(board) || won?(board) || draw?(board)
 end
 
 def winner(board)
