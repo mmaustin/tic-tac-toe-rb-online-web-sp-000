@@ -1,4 +1,4 @@
-board = ["X", "O", "X", " ", " ", " ", " ", " ", " "]
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -33,12 +33,12 @@ def won?(board)
    return outcome
 end
 
-won?(board)
+#won?(board)
 
 def input_to_index(user_input)
   return user_input.to_i - 1
 end
-input_to_index("1")
+#input_to_index("1")
 
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
@@ -60,7 +60,7 @@ end
 def move(board, index, token)
   return board[index] = token
 end
-move(board, 0, "X")
+#move(board, 0, "X")
 
 def turn_count(board)
   counter = 0
@@ -71,7 +71,7 @@ def turn_count(board)
   end
   return counter
 end
-turn_count(board)
+#turn_count(board)
 
 def current_player(board)
   if turn_count(board) % 2 == 0
@@ -80,7 +80,7 @@ def current_player(board)
     return "O"
   end
 end
-current_player(board)
+#current_player(board)
 
 def full?(board)
   def check(counter)
@@ -99,7 +99,7 @@ def full?(board)
   end
   return check(counter)
 end
-full?(board)
+#full?(board)
 
 def draw?(board)
   full?(board) && !won?(board)
@@ -128,3 +128,4 @@ def play(board)
    puts "Cat's Game!"
   end
 end
+play(board)
