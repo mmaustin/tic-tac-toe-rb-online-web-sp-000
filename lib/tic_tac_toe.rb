@@ -60,7 +60,7 @@ end
 def move(board, index, token)
   return board[index] = token
 end
-move(board, 0, "X")
+#move(board, 0, "X")
 
 def turn_count(board)
   counter = 0
